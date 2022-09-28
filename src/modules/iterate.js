@@ -11,7 +11,7 @@ export const iterate = (arr) => {
   liInput.classList.add('borderBottom', 'posRelative');
   const input = document.createElement('input');
   input.classList.add('w100', 'pad10_5', 'littlePadLeft', 'italic');
-  input.placeholder = "Add to your list...";
+  input.placeholder = 'Add to your list...';
   const enterSymbol = document.createElement('i');
   enterSymbol.classList.add('fa-solid', 'fa-arrow-turn-down', 'rotate');
   // input.append(enterSymbol);
@@ -25,7 +25,7 @@ export const iterate = (arr) => {
     const spanTask = document.createElement('span');
     spanTask.classList.add('dFlex');
     const checkbox = document.createElement('input');
-    checkbox.setAttribute("type", "checkbox");
+    checkbox.setAttribute('type', 'checkbox');
     const taskText = document.createElement('p');
     taskText.innerText = element.description;
     taskText.classList.add('littlePadLeft');
@@ -37,7 +37,7 @@ export const iterate = (arr) => {
   });
 
   const clearComplete = document.createElement('li');
-  clearComplete.innerText = "Clear all completed";
+  clearComplete.innerText = 'Clear all completed';
   clearComplete.classList.add('clearAll', 'pad10_5');
   list.appendChild(clearComplete);
 }
