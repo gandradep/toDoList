@@ -6,7 +6,7 @@
 ## Built With
 
 - Html, Js, Css.
-- webpack.
+- Webpack.
 - Linters.
 
 ## Authors
