@@ -1,6 +1,6 @@
 # webpackDemo
 
-> This project was shows webpack bunddle. Using html web pack plugin, html template, css and local dev server.
+> This project is a simple HTML list of To Do tasks. Built using webpack and served by a webpack server.
 
 
 ## Built With
@@ -23,6 +23,7 @@
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
+- Icons from [fontawesome](https://fontawesome.com/)
 
 
 ## 📝 License
