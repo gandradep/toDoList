@@ -19,7 +19,7 @@ export const iterate = (arr) => {
   liTitle.append(title, refresh);
   list.append(liTitle, liInput);
 
-  arr.forEach(element => {
+  arr.forEach((element) => {
     const li = document.createElement('li');
     li.classList.add('dFlex', 'justBetween', 'borderBottom', 'pad10_5', 'littlePadLeft');
     const spanTask = document.createElement('span');
@@ -40,4 +40,4 @@ export const iterate = (arr) => {
   clearComplete.innerText = 'Clear all completed';
   clearComplete.classList.add('clearAll', 'pad10_5');
   list.appendChild(clearComplete);
-}
+};
