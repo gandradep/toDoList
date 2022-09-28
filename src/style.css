@@ -1,7 +1,75 @@
-body {
-  background-color: bisque;
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.hello {
-  color: red;
+body {
+  background-color: bisque;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  border: hidden;
+}
+
+.dFlex{
+  display: flex;
+}
+
+.justBetween {
+  justify-content: space-between;
+}
+
+.littlePadLeft {
+  padding-left: 10px;
+}
+
+.w100{
+  width: 100%;
+}
+
+.borderBottom {
+  border-bottom: 1px solid #eee;
+}
+
+.clearAll {
+  background-color: #eee;
+  font-weight: 300;
+  text-align: center;
+
+}
+
+.italic {
+  font-style: italic;
+}
+
+#list {
+  width: 40%;
+  background-color: white;
+  box-shadow: 5px 5px 15px;
+}
+
+.pad10_5 {
+  padding: 10px 5px;
+}
+
+li {
+  list-style: none;
+  }
+
+.posRelative {
+  position: relative;
+
+}
+
+.rotate {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: gray;
 }

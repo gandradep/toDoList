@@ -1,36 +1,14 @@
 import _ from 'lodash';
 import './style.css';
-
+import { todos } from './modules/objectArray.js';
+import { sort } from './modules/sort.js';
+import { iterate } from './modules/iterate.js';
 const list = document.getElementById('list');
 
-const todos = [
-  {
-    "description": "workout",
-    "completed": false,
-    "index": 1,
-  },
-  {
-    "description": "study mandarin",
-    "completed": false,
-    "index": 2,
-  },
-  {
-    "description": "practice guitar",
-    "completed": false,
-    "index": 3,
-  },
-];
-const iterate = (arr) => {
-  arr.forEach(element => {
-    const li = document.createElement('li');
-    const checkbox = document.createElement('input');
-    checkbox.setAttribute("type", "checkbox");
-    li.appendChild(checkbox);
-    list.appendChild(li);
-  });
-}
 
-iterate(todos);
+
+//
+iterate(sort(todos));
 
 
 // function component() {
