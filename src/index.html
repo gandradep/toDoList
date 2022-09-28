@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <title>2 do list</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <title>2 do list</title>
 </head>
 <body>
-    <h1 id="pageTitle">To do List</h1>
-    <section id="main" class="dFlex">
-      <ul id="list">
+  <h1 id="pageTitle">To do List</h1>
+  <section id="main" class="dFlex">
+    <ul id="list">
+      <li class="dFlex justBetween borderBottom pad10_5">
+        <p>Today's To Do</p>
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </li>
+      <li class="borderBottom">
+        <form id="addForm" class="posRelative dFlex " action="" method="post"
+          ><input required class="w100  littlePadLeft italic" type="text" name="task" value="" placeholder="Add to your list...">
+          <input class="rotate" type="submit" name="" value="<-">
+          <!-- &#8629 -->
+        </form>
+      </li>
+      <div id="taskList" class="">
 
-      </ul>
-    </section>
+
+      </div>
+    </ul>
+  </section>
 
 </body>
 </html>

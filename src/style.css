@@ -66,6 +66,7 @@ input {
 
 li {
   list-style: none;
+  height: 50px;
 }
 
 .posRelative {
@@ -73,9 +74,8 @@ li {
 }
 
 .rotate {
-  transform: rotate(90deg);
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  background-color: white;
+  font-size: 30px;
   color: gray;
+  margin-right: 10px;
 }
