@@ -16,7 +16,7 @@ input {
   border: hidden;
 }
 
-.dFlex{
+.dFlex {
   display: flex;
 }
 
@@ -28,7 +28,7 @@ input {
   padding-left: 10px;
 }
 
-.w100{
+.w100 {
   width: 100%;
 }
 
@@ -40,7 +40,6 @@ input {
   background-color: #eee;
   font-weight: 300;
   text-align: center;
-
 }
 
 .italic {
@@ -59,11 +58,10 @@ input {
 
 li {
   list-style: none;
-  }
+}
 
 .posRelative {
   position: relative;
-
 }
 
 .rotate {

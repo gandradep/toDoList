@@ -1,5 +1,2 @@
-export const sort = (arr) => {
-  return arr.sort((a,b) => {
-    return a.index - b.index;
-  });
-};
+/* eslint-disable import/prefer-default-export */
+export const sort = (arr) => arr.sort((a, b) => a.index - b.index );

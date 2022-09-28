@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+const list = document.getElementById('list');
 export const iterate = (arr) => {
   const liTitle = document.createElement('li');
   liTitle.classList.add('dFlex', 'justBetween', 'borderBottom', 'pad10_5');
