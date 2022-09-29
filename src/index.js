@@ -4,6 +4,7 @@ import { sort } from './modules/sort.js';
 import { iterate } from './modules/iterate.js';
 const myTaskList = new TaskList();
 const form = document.getElementById('addForm');
+myTaskList.getLocalData();
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
