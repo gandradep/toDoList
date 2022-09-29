@@ -1,5 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import { TaskTemplate } from './taskTemplate.js';
+
 const tasksContainer = document.getElementById('taskList');
 export class TaskList {
   constructor() {
@@ -7,15 +8,15 @@ export class TaskList {
   }
 
   addTask = (task, completed, index) => {
-    const taskAdded = new TaskTemplate (task, completed, index);
+    const taskAdded = new TaskTemplate(task, completed, index);
     this.taskArray.push(taskAdded);
     localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
   }
 
   getLocalData = () => {
-    if (localStorage.getItem('Task_list') !== null){
+    if (localStorage.getItem('Task_list') !== null) {
       this.taskArray = JSON.parse(localStorage.getItem('Task_list'));
-    }else {
+    } else {
       this.taskArray = [];
     }
   }
@@ -44,7 +45,7 @@ export class TaskList {
       li.append(spanTask, editButton);
       tasksContainer.appendChild(li);
       /* updating element index */
-      element.index = this.taskArray.indexOf(element)+1;
+      element.index = this.taskArray.indexOf(element) + 1;
     });
     localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
   }
