@@ -32,28 +32,38 @@ export class TaskList {
       taskText.classList.add('littlePadLeft', 'pTask', 'fGrow');
       const textArea = document.createElement('textArea');
       textArea.classList.add('littlePadLeft', 'fGrow', 'dNone', 'mr10p');
-      const threeDots = document.createElement('button');
-      threeDots.classList.add('mr10p');
+      const editButton = document.createElement('button');
+      const threeDots = document.createElement('i');
+      threeDots.classList.add('fa-solid', 'fa-ellipsis-vertical', 'pad10_5');
+      const delSymbol = document.createElement('i');
+      delSymbol.classList.add('fa-regular', 'fa-trash-can', 'dNone');
+      editButton.append(threeDots, delSymbol);
       spanTask.append(checkbox, taskText, textArea);
-      li.append(spanTask, threeDots);
+      li.append(spanTask, editButton);
       tasksContainer.appendChild(li);
     });
   }
   togglePtoTextArea = (task) => {
+    const vertdots = task.parentNode.nextSibling.firstChild;
+    const delSym = vertdots.nextSibling;
     const arrayP = Array.from(document.querySelectorAll('.pTask'));
     const indexTask = arrayP.indexOf(task);
     const value = task.innerText;
     const textArea = task.nextSibling;
     task.classList.toggle('dNone');
     textArea.classList.toggle('dNone');
+    vertdots.classList.toggle('dNone');
+    delSym.classList.toggle('dNone');
     textArea.value = value;
-    return [textArea, indexTask];
+    return [textArea, indexTask, delSym];
   }
-  updateTask = (element, index) => {
+  updateTask = (element, index, butt) => {
     this.taskArray[index].description = element.value;
     localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
     element.classList.toggle('dNone');
     element.previousSibling.classList.toggle('dNone');
+    butt.classList.toggle('dNone');
+    butt.previousSibling.classList.toggle('dNone');
     this.displayList();
   }
 }

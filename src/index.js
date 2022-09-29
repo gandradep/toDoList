@@ -22,9 +22,11 @@ form.addEventListener('submit', (event) => {
 tasksContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('pTask')) {
     const arrayVal = myTaskList.togglePtoTextArea(e.target);
-    arrayVal[0].addEventListener('blur', (e) => {
-      myTaskList.updateTask(e.target, arrayVal[1]);
-
+      arrayVal[0].addEventListener('blur', (e) => {
+      myTaskList.updateTask(e.target, arrayVal[1], arrayVal[2]);
+    });
+    arrayVal[2].addEventListener('click', (e) => {
+      console.log('click');
     });
   }
 });
