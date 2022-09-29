@@ -14,6 +14,13 @@ input {
   border: hidden;
 }
 
+textarea {
+  border: hidden;
+  resize: none;
+  height: 35px;
+  padding-top: 6px;
+  margin-left: 5px;
+}
 #pageTitle {
   text-align: center;
 }
@@ -28,6 +35,14 @@ input {
   display: flex;
 }
 
+.dNone {
+  display: none;
+}
+
+.fGrow {
+  flex-grow: 1;
+}
+
 .justBetween {
   justify-content: space-between;
   align-items: center;
@@ -35,6 +50,10 @@ input {
 
 .littlePadLeft {
   padding-left: 10px;
+}
+
+.mr10p {
+  margin-right: 10px;
 }
 
 .w100 {

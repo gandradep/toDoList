@@ -4,8 +4,11 @@ import { sort } from './modules/sort.js';
 import { iterate } from './modules/iterate.js';
 const myTaskList = new TaskList();
 const form = document.getElementById('addForm');
+const tasksContainer = document.getElementById('taskList');
 myTaskList.getLocalData();
 myTaskList.displayList();
+
+ /* add task eventListner */
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const indexAssign = myTaskList.taskArray.length + 1;
@@ -13,4 +16,11 @@ form.addEventListener('submit', (event) => {
   console.log(myTaskList.taskArray);
   form.firstChild.value = '';
   myTaskList.displayList();
-})
+});
+
+/* update task addEventListener */
+tasksContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('pTask')) {
+    myTaskList.updateTask(e.target);
+  }
+});
