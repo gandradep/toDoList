@@ -41,6 +41,8 @@ export class TaskList {
       spanTask.append(checkbox, taskText, textArea);
       li.append(spanTask, editButton);
       tasksContainer.appendChild(li);
+      /* updating element index */
+      element.index = this.taskArray.indexOf(element)+1;
     });
   }
   togglePtoTextArea = (task) => {
@@ -64,6 +66,13 @@ export class TaskList {
     element.previousSibling.classList.toggle('dNone');
     butt.classList.toggle('dNone');
     butt.previousSibling.classList.toggle('dNone');
+    this.displayList();
+  }
+  removeTask = (element, index) => {
+    this.taskArray.splice(index,1);
+    localStorage.setItem('Task_list', JSON.stringify(this.taskArray));    
+    element.classList.toggle('dNone');
+    element.previousSibling.classList.toggle('dNone');
     this.displayList();
   }
 }
