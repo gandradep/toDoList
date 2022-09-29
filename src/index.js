@@ -1,7 +1,7 @@
 import './style.css';
 import { TaskList } from './modules/taskList.js';
 import { sort } from './modules/sort.js';
-import { listFooter } from './modules/iterate.js';
+import { listFooter } from './modules/listFooter.js';
 const myTaskList = new TaskList();
 const form = document.getElementById('addForm');
 const tasksContainer = document.getElementById('taskList');
