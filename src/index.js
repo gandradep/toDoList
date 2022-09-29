@@ -5,11 +5,12 @@ import { iterate } from './modules/iterate.js';
 const myTaskList = new TaskList();
 const form = document.getElementById('addForm');
 myTaskList.getLocalData();
-
+myTaskList.displayList();
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const indexAssign = myTaskList.taskArray.length + 1;
   myTaskList.addTask(form.firstChild.value, false, indexAssign);
   console.log(myTaskList.taskArray);
   form.firstChild.value = '';
+  myTaskList.displayList();
 })

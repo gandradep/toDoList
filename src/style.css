@@ -30,6 +30,7 @@ input {
 
 .justBetween {
   justify-content: space-between;
+  align-items: center;
 }
 
 .littlePadLeft {
