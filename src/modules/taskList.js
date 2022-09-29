@@ -44,6 +44,8 @@ export class TaskList {
       /* updating element index */
       element.index = this.taskArray.indexOf(element)+1;
     });
+    localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
+
   }
   togglePtoTextArea = (task) => {
     const vertdots = task.parentNode.nextSibling.firstChild;
@@ -70,7 +72,7 @@ export class TaskList {
   }
   removeTask = (element, index) => {
     this.taskArray.splice(index,1);
-    localStorage.setItem('Task_list', JSON.stringify(this.taskArray));    
+    localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
     element.classList.toggle('dNone');
     element.previousSibling.classList.toggle('dNone');
     this.displayList();

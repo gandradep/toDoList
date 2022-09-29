@@ -22,7 +22,8 @@ textarea {
   padding-top: 6px;
   margin-left: 5px;
 }
-#pageTitle {
+
+.textCenter {
   text-align: center;
 }
 
@@ -78,6 +79,7 @@ textarea {
 button {
   background-color: white;
   width: 20px;
+  height: 38px;
 }
 
 #list {
@@ -99,7 +101,7 @@ li {
   position: relative;
 }
 
-.rotate {
+.enterIcon {
   background-color: white;
   font-size: 30px;
   color: gray;
