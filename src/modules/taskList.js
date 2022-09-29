@@ -11,6 +11,7 @@ export class TaskList {
     this.taskArray.push(taskAdded);
     localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
   }
+
   getLocalData = () => {
     if (localStorage.getItem('Task_list') !== null){
       this.taskArray = JSON.parse(localStorage.getItem('Task_list'));
@@ -18,6 +19,7 @@ export class TaskList {
       this.taskArray = [];
     }
   }
+
   displayList = () => {
     tasksContainer.innerText = '';
     this.taskArray.forEach((element) => {
@@ -45,8 +47,8 @@ export class TaskList {
       element.index = this.taskArray.indexOf(element)+1;
     });
     localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
-
   }
+
   togglePtoTextArea = (task) => {
     const vertdots = task.parentNode.nextSibling.firstChild;
     const delSym = vertdots.nextSibling;
@@ -61,6 +63,7 @@ export class TaskList {
     textArea.value = value;
     return [textArea, indexTask, delSym];
   }
+
   updateTask = (element, index, butt) => {
     this.taskArray[index].description = element.value;
     localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
@@ -70,8 +73,9 @@ export class TaskList {
     butt.previousSibling.classList.toggle('dNone');
     this.displayList();
   }
+
   removeTask = (element, index) => {
-    this.taskArray.splice(index,1);
+    this.taskArray.splice(index, 1);
     localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
     element.classList.toggle('dNone');
     element.previousSibling.classList.toggle('dNone');
