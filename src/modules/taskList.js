@@ -32,22 +32,28 @@ export class TaskList {
       taskText.classList.add('littlePadLeft', 'pTask', 'fGrow');
       const textArea = document.createElement('textArea');
       textArea.classList.add('littlePadLeft', 'fGrow', 'dNone', 'mr10p');
-      const threeDots = document.createElement('i');
-      threeDots.classList.add('fa-solid', 'fa-ellipsis-vertical', 'mr10p');
+      const threeDots = document.createElement('button');
+      threeDots.classList.add('mr10p');
       spanTask.append(checkbox, taskText, textArea);
       li.append(spanTask, threeDots);
       tasksContainer.appendChild(li);
     });
   }
-  updateTask = (task) => {
+  togglePtoTextArea = (task) => {
     const arrayP = Array.from(document.querySelectorAll('.pTask'));
     const indexTask = arrayP.indexOf(task);
     const value = task.innerText;
     const textArea = task.nextSibling;
-    task.classList.add('dNone');
+    task.classList.toggle('dNone');
     textArea.classList.toggle('dNone');
     textArea.value = value;
-    console.log(indexTask);
-
+    return [textArea, indexTask];
+  }
+  updateTask = (element, index) => {
+    this.taskArray[index].description = element.value;
+    localStorage.setItem('Task_list', JSON.stringify(this.taskArray));
+    element.classList.toggle('dNone');
+    element.previousSibling.classList.toggle('dNone');
+    this.displayList();
   }
 }

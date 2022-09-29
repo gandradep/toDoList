@@ -21,6 +21,10 @@ form.addEventListener('submit', (event) => {
 /* update task addEventListener */
 tasksContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('pTask')) {
-    myTaskList.updateTask(e.target);
+    const arrayVal = myTaskList.togglePtoTextArea(e.target);
+    arrayVal[0].addEventListener('blur', (e) => {
+      myTaskList.updateTask(e.target, arrayVal[1]);
+
+    });
   }
 });
