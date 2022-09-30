@@ -1,4 +1,4 @@
-# webpackDemo
+# to do list project
 
 > This project is a simple HTML list of To Do tasks. Built using webpack and served by a webpack server.
 > For this part of this project we add this functionalities to the list:
@@ -6,6 +6,7 @@
 - 'Clear All completed' button enable.
 
 >To run the project download the repository and install all the dependencies.
+> See [live demo](https://gandradep.github.io/toDoList/dist/)
 ## Built With
 
 - Html, Js, Css.
