@@ -3,6 +3,8 @@ import { TaskList } from './modules/taskList.js';
 
 import { listFooter } from './modules/listFooter.js';
 
+import { checked } from './modules/check.js';
+
 const myTaskList = new TaskList();
 const form = document.getElementById('addForm');
 const tasksContainer = document.getElementById('taskList');
@@ -31,6 +33,13 @@ tasksContainer.addEventListener('click', (e) => {
     });
     delButton.addEventListener('click', (e) => {
       myTaskList.removeTask(e.target, elementIndex);
+    });
+  }
+  if (e.target.classList.contains('check')) {
+    e.target.addEventListener('change', (e) => {
+      const li = e.target.parentNode.parentNode;
+      checked(e.target, myTaskList.taskArray);
+      
     });
   }
 });

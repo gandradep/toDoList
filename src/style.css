@@ -27,6 +27,11 @@ textarea {
   text-align: center;
 }
 
+.strike {
+  color: red;
+  text-decoration: line-through;
+}
+
 #main {
   align-items: center;
   justify-content: center;

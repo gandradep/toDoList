@@ -30,6 +30,7 @@ export class TaskList {
       spanTask.classList.add('dFlex', 'fGrow');
       const checkbox = document.createElement('input');
       checkbox.setAttribute('type', 'checkbox');
+      checkbox.classList.add('check');
       const taskText = document.createElement('p');
       taskText.innerText = element.description;
       taskText.classList.add('littlePadLeft', 'pTask', 'fGrow');
