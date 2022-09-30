@@ -39,7 +39,7 @@ tasksContainer.addEventListener('click', (e) => {
     e.target.addEventListener('change', (e) => {
       const li = e.target.parentNode.parentNode;
       checked(e.target, myTaskList.taskArray);
-      
+      myTaskList.displayList();
     });
   }
 });

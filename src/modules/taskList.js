@@ -22,6 +22,7 @@ export class TaskList {
   }
 
   displayList = () => {
+
     tasksContainer.innerText = '';
     this.taskArray.forEach((element) => {
       const li = document.createElement('li');
@@ -34,6 +35,10 @@ export class TaskList {
       const taskText = document.createElement('p');
       taskText.innerText = element.description;
       taskText.classList.add('littlePadLeft', 'pTask', 'fGrow');
+      if (element.completed == true) {
+        checkbox.checked = true;
+        taskText.classList.add('strike');
+      };
       const textArea = document.createElement('textArea');
       textArea.classList.add('littlePadLeft', 'fGrow', 'dNone', 'mr10p');
       const editButton = document.createElement('button');
