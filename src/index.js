@@ -40,7 +40,6 @@ tasksContainer.addEventListener('click', (e) => {
   }
   if (e.target.classList.contains('check')) {
     e.target.addEventListener('change', (e) => {
-      const li = e.target.parentNode.parentNode;
       checked(e.target, myTaskList.taskArray);
       myTaskList.displayList();
     });
@@ -48,9 +47,8 @@ tasksContainer.addEventListener('click', (e) => {
 });
 
 // clear all completed
-clearButton.addEventListener('click', (e) => {
+clearButton.addEventListener('click', () => {
   clearComplete(myTaskList.taskArray);
   myTaskList.getLocalData();
   myTaskList.displayList();
-  console.log(myTaskList.taskArray);
-})
+});

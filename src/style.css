@@ -81,16 +81,16 @@ textarea {
   font-style: italic;
 }
 
-li.dFlex button {
-  background-color: white;
-  width: 20px;
-  height: 38px;
-}
 .clearAll button {
   background-color: inherit;
   width: 100%;
   height: 100%;
-  
+}
+
+li.dFlex button {
+  background-color: white;
+  width: 20px;
+  height: 38px;
 }
 
 #list {

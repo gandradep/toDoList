@@ -2,11 +2,10 @@
 
 > This project is a simple HTML list of To Do tasks. Built using webpack and served by a webpack server.
 > For this part of this project we add this functionalities to the list:
-- add task
-- remove task
-- update task
+- check box cross a task when checked.
+- 'Clear All completed' button enable.
 
-
+>To run the project download the repository and install all the dependencies.
 ## Built With
 
 - Html, Js, Css.
