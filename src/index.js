@@ -4,14 +4,17 @@ import { TaskList } from './modules/taskList.js';
 import { listFooter } from './modules/listFooter.js';
 
 import { checked } from './modules/check.js';
+import { clearComplete } from './modules/clearComplete.js';
 
 const myTaskList = new TaskList();
 const form = document.getElementById('addForm');
 const tasksContainer = document.getElementById('taskList');
 const list = document.getElementById('list');
+const clearButton = listFooter();
+
 myTaskList.getLocalData();
 myTaskList.displayList();
-list.appendChild(listFooter());
+list.appendChild(clearButton);
 
 /* add task eventListner */
 form.addEventListener('submit', (event) => {
@@ -43,3 +46,11 @@ tasksContainer.addEventListener('click', (e) => {
     });
   }
 });
+
+// clear all completed
+clearButton.addEventListener('click', (e) => {
+  clearComplete(myTaskList.taskArray);
+  myTaskList.getLocalData();
+  myTaskList.displayList();
+  console.log(myTaskList.taskArray);
+})
